@@ -10,6 +10,10 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 public class HelloWorldControlerTests {
     private MockMvc mvc;
     @Before
@@ -22,5 +26,18 @@ public class HelloWorldControlerTests {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print())
                 .andReturn();
+    }
+
+    @Test
+    public void exceptionTest(){
+        File f = new File("d:/LOL.exe");
+        try {
+            System.out.println("试图打开 d:/LOL.exe");
+            new FileInputStream(f);
+            System.out.println("成功打开");
+        } catch (FileNotFoundException e) {
+            System.out.println("d:/LOL.exe不存在");
+            e.printStackTrace();
+        }
     }
 }
