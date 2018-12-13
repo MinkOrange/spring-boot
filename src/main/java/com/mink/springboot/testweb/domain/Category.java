@@ -9,6 +9,7 @@ import java.lang.annotation.Target;
 @Table(name = "category_")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class Category {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

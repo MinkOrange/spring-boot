@@ -1,7 +1,10 @@
 package com.mink.springboot.testweb;
 
+import com.mink.springboot.testweb.controller.CategoryController;
 import com.mink.springboot.testweb.controller.HelloWorldController;
+import com.mink.springboot.testweb.domain.Category;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
@@ -13,6 +16,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HelloWorldControlerTests {
     private MockMvc mvc;
@@ -20,6 +25,7 @@ public class HelloWorldControlerTests {
     public void setUp() throws Exception{
         mvc = MockMvcBuilders.standaloneSetup(new HelloWorldController()).build();
     }
+    @Ignore
     @Test
     public void getHello() throws Exception{
         mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
@@ -28,6 +34,7 @@ public class HelloWorldControlerTests {
                 .andReturn();
     }
 
+    @Ignore
     @Test
     public void exceptionTest(){
         File f = new File("d:/LOL.exe");
@@ -39,5 +46,19 @@ public class HelloWorldControlerTests {
             System.out.println("d:/LOL.exe不存在");
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void TestArrayList(){
+        ArrayList list = new ArrayList();
+        list.add(new Category());
+        System.out.println(list.size());
+        list.add(new Category());
+        System.out.println(list.size());
+        List<Category> categoryList = new ArrayList<>();
+        categoryList.add(new Category());
+        ArrayList<Category> categories = new ArrayList<>();
+        categories.add(new Category());
+
     }
 }
