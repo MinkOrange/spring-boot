@@ -1,7 +1,6 @@
-package com.mink.springboot.testweb.service;
+package com.mink.springboot.testweb.dao;
 
-import com.mink.springboot.testweb.domain.Category;
-import com.mink.springboot.testweb.domain.Category2;
+import com.mink.springboot.testweb.pojo.Category;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

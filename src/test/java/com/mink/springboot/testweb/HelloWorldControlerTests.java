@@ -1,8 +1,7 @@
 package com.mink.springboot.testweb;
 
-import com.mink.springboot.testweb.controller.CategoryController;
-import com.mink.springboot.testweb.controller.HelloWorldController;
-import com.mink.springboot.testweb.domain.Category;
+import com.mink.springboot.testweb.web.HelloWorldController;
+import com.mink.springboot.testweb.pojo.Category;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;

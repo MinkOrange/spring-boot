@@ -1,4 +1,4 @@
-package com.mink.springboot.testweb.controller;
+package com.mink.springboot.testweb.web;
 
 
 import org.springframework.stereotype.Controller;

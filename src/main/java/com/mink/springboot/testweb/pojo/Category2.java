@@ -1,4 +1,4 @@
-package com.mink.springboot.testweb.domain;
+package com.mink.springboot.testweb.pojo;
 
 public class Category2 {
     private int id;
