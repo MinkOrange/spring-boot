@@ -13,5 +13,7 @@
 </head>
 <body>
 Hi,JSP.现在时间是${now}
+<br>
+<img src="/uploaded/1544930324404health_xwj.png">
 </body>
 </html>
